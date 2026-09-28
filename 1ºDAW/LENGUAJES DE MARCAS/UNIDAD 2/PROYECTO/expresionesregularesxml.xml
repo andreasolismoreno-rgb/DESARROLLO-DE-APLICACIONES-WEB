@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Capítulo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="expresionesregulares.xsd">
+<expresiones>
+    <expresion1> Capítulo \d </expresion1>
+    <expresion2> Capítulo \d{1,2}</expresion2>
+    <expresion3> </expresion3>
+    <expresion4> </expresion4>
+    <expresion5> </expresion5>
+    <expresion6> </expresion6>
+    <expresion7> </expresion7>
+    <expresion8> </expresion8>
+</expresiones>
+</Capítulo>

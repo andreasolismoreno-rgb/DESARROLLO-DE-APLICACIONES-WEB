@@ -1,0 +1,126 @@
+<!DOCTYPE html> <!-- Andrea Solís Moreno 1ºDAW -->
+                <!-- Generar el formulario siguiente de acuerdo a los siguientes requisitos. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario.</title>
+    </head>
+    <body>
+
+        <form> <!-- La etiqueta <form>se utiliza para crear un formulario HTML para la entrada del usuario.-->
+            <!-- Control para indicar la fecha. -->
+            <label for="fecha">Fecha:
+                <input type="date" id="fecha" name="fecha">
+            </label>
+            <br> <br>  <!--Es un elemento de salto de línea.-->
+
+            <!-- Control para elegir ficheros. -->
+            <label for="fichero">Seleccionar fichero:
+                <input type="file" id="fichero" name="fichero">
+            </label>
+            <br><br>
+
+            <!-- Radiobuttons. Procesador y Asignaturas. -->
+            <!--Permiten al usuario seleccionar UNA OPCIÓN.-->
+
+            <!-- Radiobuttons procesador -->
+            <p>Seleccionar procesador:</p>
+            <input type="radio" id="amd" name="procesador" value="procesadoramd">
+            <label for="amd">AMD</label><br>
+
+            <input type="radio" id="intel5" name="procesador" value="procesadorintel_i5">
+            <label for="intel5">Intel i5</label><br>
+
+            <input type="radio" id="intel7" name="procesador" value="procesadorintel_i7">
+            <label for="intel7">Intel i7</label>
+            <br><br>
+
+            <!-- Radiobuttons asignatura -->
+            <p>Seleccionar asignatura: </p>
+             
+            <label>
+                <input type="radio" name="asignatura" value="asignaturamatematicas"> Matemáticas
+            </label><br>
+            <label>
+                <input type="radio" name="asignatura" value="asignaturahistoria"> Historia
+            </label><br>
+            <label>
+                <input type="radio" name="asignatura" value="asignaturageografia"> Geografía
+            </label><br>
+            <label>
+                <input type="radio" name="asignatura" value="asignaturalengua"> Lengua
+            </label>
+            <br><br>
+
+            <!-- Cuadros de texto: Nombre, Apellidos, Dirección. -->
+            <label>Nombre:
+                <input type="text" name="nombre" placeholder="Nombre">
+            </label>
+            <!--La etiqueta placeholder es un atributo que se usa dentro de elementos de formulario como 
+            <input> o <textarea> para mostrar un texto de sugerencia dentro del campo. -->
+            <br><br>
+
+            <label>Apellidos:
+                <input type="text" name="apellidos" placeholder="Apellidos">
+            </label>
+            <br><br>
+
+            <label>Direccion:
+                <input type="text" name="direccion" placeholder="Direccion">
+            </label>
+            <br><br>
+
+            <!-- Hay un control para elegir color. -->
+            <label>Seleccionar color:
+                <input type="color" name="color">
+            </label>
+            <br><br>
+
+            <!-- Hay un textarea qu emide 6 filas y 59 columnas que lleva dentro el texto "..." -->
+            <textarea rows="6" cols="59">Utilice este cuadro para escribir</textarea>
+            <br><br>
+
+            <!-- Control para indicar la fecha (Segunda fecha). -->
+            <label>Seleccionar fecha:
+                <input type="date" name="fecha">
+            </label>
+            <br><br>
+
+            <!-- Lista desplegable de idioma con opciones. -->
+            <label>Seleccionar idioma:
+                <select name="idioma">
+                    <option value="ingles">Inglés</option>
+                    <option value="aleman">Alemán</option>
+                    <option value="frances">Francés</option>
+                </select>
+            </label>
+            <br><br>
+
+            <!-- Control para indicar la hora. -->
+            <label>Seleccionar hora:
+                <input type="time" name="hora">
+            </label>
+            <br><br>
+
+            <!-- Control para elegir ficheros. (Segundo fichero) -->
+            <label>Seleccionar fichero:
+                <input type="file" name="fichero">
+            </label>
+            <br><br>
+
+            <!-- Checkboxes.-->
+            <!--Permiten al usuaio seleccionar CERO o MÁS OPCIONES.-->
+            <p>Seleccionar sexo:</p>
+            <label>
+                <input type="checkbox" name="sexo" value="sexomujer"> Mujer
+            </label><br>
+            <label>
+                <input type="checkbox" name="sexo" value="sexohombre"> Hombre
+            </label>
+            <br><br>
+            <input type = "submit" value = "Enviar formulario">
+            <br><br>
+
+        </form>
+    </body>
+</html>

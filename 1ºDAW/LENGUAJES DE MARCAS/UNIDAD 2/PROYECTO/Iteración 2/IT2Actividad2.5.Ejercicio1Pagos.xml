@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ELEMENTO RAÍZ -->
+  <xs:element name="pagos">
+    <xs:complexType>
+      <xs:sequence>
+        
+        <!-- nombre: máximo 3 veces, valor por defecto "A", atributo dni -->
+        <xs:element name="nombre" minOccurs="0" maxOccurs="3" default="A">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="dni" type="dniType" use="required"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- fechaNacimiento: con atributo edad entre 16 y 24 -->
+        <xs:element name="fechaNacimiento">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:date">
+                <xs:attribute name="edad" type="edadType"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- hora: aparece infinitas veces -->
+        <xs:element name="hora" type="xs:time" minOccurs="0" maxOccurs="unbounded"/>
+
+        <!-- precio: número decimal -->
+        <xs:element name="precio" type="xs:decimal"/>
+
+        <!-- cantidad: valor fijo 678 -->
+        <xs:element name="cantidad" fixed="678" type="xs:integer"/>
+
+        <!-- pagado: booleano, valor por defecto false -->
+        <xs:element name="pagado" type="xs:boolean" default="false"/>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Restricciones personalizadas -->
+  <xs:simpleType name="dniType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="edadType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="16"/>
+      <xs:maxInclusive value="24"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

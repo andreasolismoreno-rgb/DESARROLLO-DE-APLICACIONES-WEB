@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <p id="texto">Texto original</p>
+    <button id="btnCambiar">Cambiar texto</button>
+    <script>
+        /* PASO 1: Seleccionamos los elementos del HTML por su ID */
+        const texto = document.getElementById("texto");
+        const botonTexto = document.getElementById("btnCambiar");
+/* PASO 2: Añadimos el evento "click" al botón */
+        botonTexto.addEventListener("click", function () {
+/* PASO 3: Modificamos la propiedad textContent del párrafo 
+               para que el texto cambie visualmente. */
+            texto.textContent = "El texto ha sido cambiado";
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!--Ejercicio 4 — Dos botones, dos acciones
+Objetivo: Manejar múltiples eventos.
+Enunciado:
+Un botón suma 1 al contador.
+Otro botón reinicia el contador a 0.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 - Dos Botones</title>
+</head>
+<body>
+    <p>Contador: <span id="contador">0</span></p>
+    <button id="btnSumar">Sumar 1</button>
+    <button id="btnReset">Reiniciar</button>
+
+    <script>
+        /* PASO 1: Selección de todos los elementos necesarios */
+        const displayContador = document.getElementById("contador");
+        const botonSumar = document.getElementById("btnSumar");
+        const botonReset = document.getElementById("btnReset");
+        
+        let cont = 0;
+
+        /* PASO 2: Evento para el botón de SUMAR */
+        botonSumar.addEventListener("click", function () {
+            cont++; // Usamos el atajo ++ que equivale a cont = cont + 1
+            displayContador.textContent = cont;
+        });
+
+        /* PASO 3: Evento para el botón de REINICIAR */
+        botonReset.addEventListener("click", function(){
+            cont = 0; // Volvemos la cuenta a cero
+            displayContador.textContent = cont;
+        });
+    </script>
+</body>
+</html>

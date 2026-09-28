@@ -1,0 +1,39 @@
+Representa un grupo con código 2DAW-A y 3 alumnos. 
+Cada alumno tendra id, nombre y notas.
+Alumnos sera un array de objetos
+notas sera un array de numeros
+incluye dos notas por alumnos
+
+
+{
+    "grupo": {
+        "codigo": "2DAW-A",
+        "alumnos": [
+            {
+                "id": 1,
+                "nombre": "Ana Gómez",
+                "notas": [
+                    8.5,
+                    9.0
+                ]
+            },
+            {
+                "id": 2,
+                "nombre": "Carlos Pérez",
+                "notas": [
+                    7.0,
+                    6.5
+                ]
+            },
+            {
+                "id": 3,
+                "nombre": "María López",
+                "notas": [
+                    10.0,
+                    9.5
+                ]
+            }
+        ]
+    }
+
+}

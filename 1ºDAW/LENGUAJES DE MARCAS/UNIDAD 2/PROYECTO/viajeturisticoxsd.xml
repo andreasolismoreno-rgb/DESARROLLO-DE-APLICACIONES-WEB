@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://ejemplo.org/viajes"
+           xmlns="http://ejemplo.org/viajes"
+           elementFormDefault="qualified">
+
+  <!-- ELEMENT: Declaramos el elemento raíz 'viajes' -->
+  <xs:element name="viajes" type="ViajesType"/>
+
+  <!-- complexType: definimos ViajesType -->
+  <xs:complexType name="ViajesType">
+    <xs:sequence>
+      <xs:element name="viaje" type="ViajeType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- complexType: ViajeType -->
+  <xs:complexType name="ViajeType">
+    <xs:sequence>
+      <xs:element name="cliente" type="ClienteType"/>
+      <xs:element name="fechaInicio" type="xs:date"/>
+      <xs:element name="fechaFin" type="xs:date"/>
+      <xs:element name="origen" type="xs:string"/>
+      <xs:element name="destinos" type="DestinosType"/>
+    </xs:sequence>
+    <!-- atributo id del viaje -->
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <!-- ClienteType -->
+  <xs:complexType name="ClienteType">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="apellidos" type="xs:string"/>
+      <!-- podrías añadir teléfono, email aquí -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DestinosType: contiene uno o más destino -->
+  <xs:complexType name="DestinosType">
+    <xs:sequence>
+      <xs:element name="destino" type="DestinoType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DestinoType -->
+  <xs:complexType name="DestinoType">
+    <xs:sequence>
+      <xs:element name="ciudad" type="xs:string"/>
+      <xs:element name="hotel" type="xs:string"/>
+      <xs:element name="noches" type="xs:integer"/>
+      <xs:element name="precio" type="PrecioType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- PrecioType: ejemplo de atributo en elemento -->
+  <xs:complexType name="PrecioType">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="moneda" type="xs:string" use="required" default="EUR"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>

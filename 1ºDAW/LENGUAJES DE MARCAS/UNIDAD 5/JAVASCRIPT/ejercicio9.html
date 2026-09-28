@@ -1,0 +1,43 @@
+<!--Ejercicio 9 — Detectar Enter en un input
+Objetivo: Trabajar con eventos en inputs.
+Enunciado:
+Cuando el usuario escriba en el input y pulse Enter, muestra el texto debajo.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+</head>
+
+<body>
+    <input id="inputTexto" placeholder="Escribe algo">
+    <p id="resultado"></p>
+    <script>
+        /* PASO 1: Seleccionamos el input y el párrafo */
+        const miInput = document.getElementById("inputTexto");
+        const miResultado = document.getElementById("resultado");
+
+        /* PASO 2: Ponemos el "oído" en el input. 
+           Escuchamos 'keydown' para saber qué tecla pulsa el usuario. */
+        miInput.addEventListener("keydown", function (event) {
+
+            /* PASO 3: Comprobamos si la tecla pulsada es "Enter" */
+            if (event.key === "Enter") {
+
+                /* PASO 4: Obtenemos lo que hay escrito dentro del input.
+                   IMPORTANTE: Usamos la propiedad .value */
+                let textoEscrito = miInput.value;
+
+                /* PASO 5: Lo mostramos en el párrafo */
+                miResultado.textContent = "Has escrito: " + textoEscrito;
+
+                /* Opcional: Limpiar el input después de pulsar Enter */
+                miInput.value = "";
+            }
+        });
+    </script>
+</body>
+
+</html>

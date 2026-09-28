@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--SIMULACRO PRUEBA PRÁCTICA Unidad2 Andrea Solís Moreno-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--Elemento Raíz-->
+<xs:element name="inscripciones">
+    <xs:complexType>
+        <xs:sequence>
+            <!--catalogoCursos-->
+            <xs:element name="catalogoCursos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <!--curso-->
+                        <xs:element name="curso" minOccurs="2" maxOccurs="2">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <!--titulo-->
+                                    <xs:element name="titulo" minOccurs="1"/>
+                                    <!--fechaInicio-->
+                                    <xs:element name="fechaInicio" type="xs:date" minOccurs="1"/>
+                                    <!--duracionHoras-->
+                                    <xs:element name="duracionHoras" type="xs:integer" minOccurs="1"/>
+                                    <!--precio-->
+                                    <xs:element name="precio" minOccurs="1">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:decimal">
+                                                <xs:fractionDigits value="2"></xs:fractionDigits>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <!--descripcion-->
+                                    <xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+                                </xs:sequence>
+                                <!--AtributosCurso-->
+                                <!--codigo-->
+                                <xs:attribute name="codigo" use="required">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="C-\d{3}"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <!--modalidad-->
+                                <xs:attribute name="modalidad">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="presencial"/>
+                                            <xs:enumeration value="online"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <!--activo-->
+                                <xs:attribute name="activo" use="optional">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="true"/>
+                                            <xs:enumeration value="false"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--alumnos-->
+            <xs:element name="alumnos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <!--alumno-->
+                        <xs:element name="alumno" minOccurs="1" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <!--nombre-->
+                                    <xs:element name="nombre" minOccurs="1"/>
+                                    <!--apellidos-->
+                                    <xs:element name="apellidos" minOccurs="1"/>
+                                    <!--email-->
+                                    <xs:element name="email" minOccurs="1"/>
+                                    <!--telefono-->
+                                    <xs:element name="telefono" minOccurs="0"/>
+                                    <!--matriculas-->
+                                    <xs:element name="matriculas" minOccurs="1">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <!--matricula-->
+                                                <xs:element name="matricula" minOccurs="1" maxOccurs="unbounded">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <!--fecha-->
+                                                            <xs:element name="fecha" type="xs:date" minOccurs="0"/>
+                                                            <!--nota-->
+                                                            <xs:element name="nota" minOccurs="0">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:decimal">
+                                                                        <xs:minInclusive value="0"/>
+                                                                        <xs:maxInclusive value="10"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                        <!--AtributoMatricula-->
+                                                        <xs:attribute name="cursoCodigo">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:pattern value="C-\d{3}"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <!--AtributosAlumno-->
+                                <!--id-->
+                                <xs:attribute name="id" use="required">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:pattern value="A-\d{4}"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                                <!--beca-->
+                                <xs:attribute name="beca" use="optional">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="ninguna"/>
+                                            <xs:enumeration value="parcial"/>
+                                            <xs:enumeration value="completa"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

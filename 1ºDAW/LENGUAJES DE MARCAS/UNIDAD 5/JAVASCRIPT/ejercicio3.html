@@ -1,0 +1,38 @@
+<!--Ejercicio 3 — Contador de clicks
+Objetivo: Manejar estado con variables.
+Enunciado:
+Cada vez que el usuario haga click en el botón, aumenta el número del
+contador.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Contador Corregido</title>
+</head>
+<body>
+
+    <p>Clicks: <span id="contador">0</span></p>
+    <button id="btnClick">Haz click</button>
+
+    <script>
+        /* 1. Seleccionamos el botón usando su ID del HTML */
+        const botonClick = document.getElementById("btnClick");
+
+        /* 2. Seleccionamos el span donde se verá el número */
+        const contadorHTML = document.getElementById("contador");
+
+        /* 3. Creamos la variable para contar */
+        let cuenta = 0;
+
+        /* 4. IMPORTANTE: Usamos el mismo nombre "botonClick" aquí abajo */
+        botonClick.addEventListener("click", function () {
+            // Sumamos 1 a la cuenta
+            cuenta = cuenta + 1;
+            // Lo pintamos en el HTML
+            contadorHTML.textContent = cuenta;
+        });
+    </script>
+
+</body>
+</html>

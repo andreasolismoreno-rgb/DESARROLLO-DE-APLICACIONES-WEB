@@ -1,0 +1,24 @@
+Lectura de rutas. Escrib elas rutas par aobtener el nombredel cliente, el precio del segundo porducto
+y la primera etiqueta
+Usa notación de puntos. 
+los indices de array empiezan en cero.
+
+Datos de partida
+
+{
+"cliente": {
+    "nombre": "Ana"},
+    "productos": [,
+        
+          {  "precio": 10,
+            "etiquetas": [
+                "nuevo"
+            ]},
+            {
+                "precio": 25,
+                "etiquetas": [
+                    "oferta"
+                ]
+            }
+        ]
+}

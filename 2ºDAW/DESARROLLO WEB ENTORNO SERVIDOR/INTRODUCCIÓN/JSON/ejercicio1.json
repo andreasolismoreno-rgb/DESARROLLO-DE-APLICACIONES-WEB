@@ -1,0 +1,13 @@
+<!-- Persona. Representa a una persona llamada Ana, 
+ de 19 años, estudiante, con correo y sin telefono conocido.
+ Usa String, number, boolean y null. Las ckaves en castellano y el resultado sera un unico objeto.-->
+
+{
+  "nombre": "Ana",
+  "edad": 19,
+  "estudiante": true,
+  "correo": "ana@example.com",
+  "telefono": null
+}
+
+<!-- la edad no lleva comillas, null y true tampoco-->

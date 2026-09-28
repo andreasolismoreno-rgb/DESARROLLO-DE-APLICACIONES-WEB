@@ -1,0 +1,58 @@
+<!--Reserva-->
+
+<!-- Validación de acceso-->
+
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title> RESERVA</title>
+</head>
+
+
+<body>
+    <header> </header>
+    <main>
+        <section>
+            <form action="/registro" method="POST">
+
+                <fieldset>
+                    <legend> Dia de hoy </legend>
+
+                    <div>
+                        <label for="fecha"> Fecha: </label>
+                        <input type="date" id="fecha" placeholder="Fecha" required>
+                    </div>
+
+                     <div>
+                        <label for="hora"> Hora: </label>
+                        <input type="time" id="hora" placeholder="Hora" required>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend> Reserva </legend>
+                    <div>
+                        <label for="persona"> Personas: </label>
+                        <input type="text" id="persona" min="1" max="30" placeholder="Hasta 30 personas" required>
+                    </div>
+                    <div>
+                        <label for="observaciones"> Observaciones: </label>
+                        <input type="text" id="observaciones" minlength="1" maxlength="200"
+                            placeholder="Hasta 200 caracteres " required>
+                    </div>
+
+                    <div>
+                        <button type="submit"> Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

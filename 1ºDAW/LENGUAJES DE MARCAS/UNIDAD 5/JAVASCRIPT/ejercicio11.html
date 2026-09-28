@@ -1,0 +1,41 @@
+<!--Ejercicio 11 — Evento input
+Objetivo: Detectar cambios en tiempo real.
+Enunciado:
+Mientras el usuario escribe en el input, muestra el texto debajo en tiempo real.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 11</title>
+</head>
+
+<body>
+    <input id="texto">
+    <p id="preview"></p>
+    
+    <script>
+        
+        /* PASO 1: Seleccionamos los elementos del DOM */
+        const miInput = document.getElementById("texto");
+        const miParrafo = document.getElementById("preview");
+
+        /* PASO 2: Usamos el evento 'input'. 
+           Este evento es mejor que 'keydown' para esto porque detecta 
+           cualquier cambio, incluso si el usuario borra con el ratón. */
+        miInput.addEventListener("input", function () {
+
+            /* PASO 3: Leemos el valor actual del input */
+            let contenido = miInput.value;
+
+            /* PASO 4: Lo ponemos inmediatamente en el párrafo. 
+               Esto crea el efecto de "espejo" o tiempo real. */
+            miParrafo.textContent = contenido;
+
+
+        });
+    </script>
+</body>
+
+</html>

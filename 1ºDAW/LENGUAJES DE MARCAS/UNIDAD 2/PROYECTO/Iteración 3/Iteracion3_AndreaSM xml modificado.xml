@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="tienda.xsd">
+  <pedidos>
+
+    <pedido id="PED-001" fecha="2025-09-25" estado="entregado" prioridad="alta">
+      <cliente id="CLI-001">
+        <nombre>Laura Martínez</nombre>
+        <correo>laura.martinez@example.com</correo>
+        <telefono>654321987</telefono>
+      </cliente>
+      <productos>
+        <producto id="PRO-001">
+          <nombre>Portátil Lenovo</nombre>
+          <precio>799.99</precio>
+          <cantidad>1</cantidad>
+        </producto>
+        <producto id="PRO-002">
+          <nombre>Ratón inalámbrico Logitech</nombre>
+          <precio>25.50</precio>
+          <cantidad>2</cantidad>
+        </producto>
+      </productos>
+      <envio modalidad="express">
+        <direccion>Calle Sol 12</direccion>
+        <ciudad>Madrid</ciudad>
+        <cp>28001</cp>
+        <coste>9.99</coste>
+      </envio>
+    </pedido>
+
+    <pedido id="PED-002" fecha="2025-09-28" estado="enviado" prioridad="normal">
+      <cliente id="CLI-002">
+        <nombre>Carlos Gómez</nombre>
+        <correo>carlos.gomez@example.com</correo>
+        <telefono>912345678</telefono>
+      </cliente>
+      <productos>
+        <producto id="PRO-003">
+          <nombre>Teclado mecánico Corsair</nombre>
+          <precio>89.90</precio>
+          <cantidad>1</cantidad>
+        </producto>
+        <producto id="PRO-004">
+          <nombre>Auriculares Sony WH-1000XM4</nombre>
+          <precio>299.99</precio>
+          <cantidad>1</cantidad>
+        </producto>
+      </productos>
+      <envio modalidad="estandar">
+        <direccion>Avenida Libertad 45</direccion>
+        <ciudad>Barcelona</ciudad>
+        <cp>08010</cp>
+        <coste>4.99</coste>
+      </envio>
+    </pedido>
+
+    <pedido id="PED-003" fecha="2025-10-01" estado="pendiente" prioridad="urgente">
+      <cliente id="CLI-003">
+        <nombre>Ana Rodríguez</nombre>
+        <correo>ana.rodriguez@example.com</correo>
+        <telefono>600987654</telefono>
+      </cliente>
+      <productos>
+        <producto id="PRO-005">
+          <nombre>Impresora HP LaserJet</nombre>
+          <precio>199.00</precio>
+          <cantidad>1</cantidad>
+        </producto>
+      </productos>
+      <envio modalidad="recogida">
+        <direccion>Calle Luna 8</direccion>
+        <ciudad>Sevilla</ciudad>
+        <cp>41002</cp>
+        <coste>0.00</coste>
+      </envio>
+    </pedido>
+
+  </pedidos>
+</tienda>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="libros.xsd">
+
+    <Libro isbn="9781234567890" idioma="es">
+        <Titulo>La sombra del viento</Titulo>
+        <Autor>
+            <Nombre>Carlos</Nombre>
+            <Apellidos>Ruiz Zafón</Apellidos>
+            <Nacionalidad>Española</Nacionalidad>
+        </Autor>
+        <Editorial>Planeta</Editorial>
+        <Año>2001</Año>
+        <Genero>novela</Genero>
+        <Precio>19.99</Precio>
+    </Libro>
+
+    <Libro isbn="9789876543210" idioma="en">
+        <Titulo>Harry Potter and the Philosopher's Stone</Titulo>
+        <Autor>
+            <Nombre>J.K.</Nombre>
+            <Apellidos>Rowling</Apellidos>
+        </Autor>
+        <Editorial>Bloomsbury</Editorial>
+        <Año>1997</Año>
+        <Genero>fantasia</Genero>
+        <Precio>25.50</Precio>
+    </Libro>
+
+    <Libro isbn="9781122334455" idioma="fr">
+        <Titulo>Le Petit Prince</Titulo>
+        <Autor>
+            <Nombre>Antoine</Nombre>
+            <Apellidos>de Saint-Exupéry</Apellidos>
+            <Nacionalidad>Francesa</Nacionalidad>
+        </Autor>
+        <Editorial>Gallimard</Editorial>
+        <Año>1943</Año>
+        <Genero>infantil</Genero>
+        <Precio>15.00</Precio>
+    </Libro>
+
+</Biblioteca>

@@ -1,0 +1,112 @@
+<!-- Andrea Solís Moreno - Ejercicio Cafetería La Nube -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería La Nube</title>
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Cafetería La Nube</h1>
+        <p>Bienvenido a nuestra cafetería, disfruta de nuestras especialidades y un ambiente acogedor.</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección: Nuestra cafetería con vídeo -->
+        <section id="nuestra-cafeteria">
+            <h2>Nuestra cafetería</h2>
+
+            <!-- Vídeo local con controles -->
+            <video width="600" controls>
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta vídeo.
+            </video>
+
+            <!-- Vídeo externo opcional usando iframe -->
+            <!--
+            <iframe width="600" height="340" src="https://www.youtube.com/embed/ID_DEL_VIDEO" 
+                title="Vídeo presentación" frameborder="0" allowfullscreen></iframe>
+            -->
+        </section>
+
+        <!-- Sección: Especialidades con imágenes y descripción -->
+        <section id="especialidades">
+            <h2>Especialidades</h2>
+
+            <figure>
+                <img src="cappuccino.jpg" alt="Capuccino con leche de avena" width="400">
+                <figcaption>Capuccino con leche de avena</figcaption>
+            </figure>
+
+            <figure>
+                <img src="tarta.jpg" alt="Tarta de chocolate artesanal" width="400">
+                <figcaption>Tarta de chocolate artesanal</figcaption>
+            </figure>
+        </section>
+
+        <!-- Sección: Dónde estamos con mapa incrustado -->
+        <section id="donde-estamos">
+            <h2>Dónde estamos</h2>
+
+            <!-- Mapa incrustado mediante iframe -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!..." 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <p>Dirección: Calle Falsa 123, Ciudad Ejemplo</p>
+        </section>
+
+        <!-- Sección: Normas de la casa con bloque expandible -->
+        <section id="normas">
+            <h2>Normas de la casa</h2>
+
+            <details>
+                <summary>Ver normas de la cafetería</summary>
+                <p>Wifi gratuito disponible para clientes.</p>
+                <p>Consumo mínimo: 2€ por persona.</p>
+                <p>Reservas aceptadas por teléfono o email.</p>
+            </details>
+        </section>
+
+        <!-- Sección: Opinión o frase inspiradora -->
+        <section id="inspiracion">
+            <h2>Opinión de clientes</h2>
+
+            <blockquote>
+                "El café es un abrazo en una taza." – Cliente satisfecho
+            </blockquote>
+        </section>
+
+        <!-- Sección: Información de contacto usando elementos semánticos -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <address>
+                Dirección: Calle Falsa 123, Ciudad Ejemplo<br>
+                Teléfono: 123 456 789<br>
+                Correo: <a href="mailto:info@cafeterialanube.com">info@cafeterialanube.com</a>
+            </address>
+
+            <!-- Horario de apertura usando <time> -->
+            <p>
+                Horario de apertura: 
+                <time datetime="2026-01-13T09:00">Lunes a Viernes 9:00 - 20:00</time>, 
+                <time datetime="2026-01-13T10:00">Sábados y Domingos 10:00 - 18:00</time>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Cafetería La Nube</p>
+        <p>© 2025 Cafetería La Nube</p>
+    </footer>
+
+</body>
+</html>

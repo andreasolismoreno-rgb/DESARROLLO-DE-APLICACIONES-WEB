@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding ="UTF-8"?>
+<validacion>
+    <videojuego> 
+        <titulo anyo="2017"> Fortnite </titulo>
+        <empresa> Epic Games </empresa>
+        <motor> Unreal Engine </motor>
+    </videojuego>
+
+    <ficha>
+        <nombre> Lenguaje C </nombre>
+        <empresa> SDK </empresa>
+    </ficha>
+
+    <ficha>
+        <empresa nombre="Toledo &amp; Kurylenko S.L"/> 
+        <eslogan mensaje = "Vendemos sueños imposibles"> </eslogan>
+    </ficha>
+</validacion>

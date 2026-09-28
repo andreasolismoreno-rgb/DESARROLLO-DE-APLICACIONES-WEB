@@ -1,0 +1,49 @@
+<!--Ejercicio 10 — Eventos de formulario
+Objetivo: Usar submit y preventDefault.
+Enunciado:
+Evita que el formulario se envíe y muestra un mensaje en pantalla.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+    <form id="miForm">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensaje"></p>
+    <script>
+        /* PASO 1: Seleccionamos el FORMULARIO (no el botón) 
+           El evento "submit" pertenece al formulario completo. */
+        const formulario = document.getElementById("miForm");
+        const inputNombre = document.getElementById("nombre");
+        const parrafoMensaje = document.getElementById("mensaje");
+
+        /* PASO 2: Escuchamos el evento 'submit' */
+        formulario.addEventListener("submit", function (event) {
+
+            /* PASO 3: ¡Clave del ejercicio! preventDefault()
+               Esto evita que la página se recargue al pulsar enviar. */
+            event.preventDefault();
+
+            /* PASO 4: Recogemos el valor del input */
+            let nombreUsuario = inputNombre.value;
+
+            /* PASO 5: Mostramos el mensaje personalizado */
+            if (nombreUsuario === "") {
+                parrafoMensaje.textContent = "Por favor, escribe un nombre antes de enviar.";
+                parrafoMensaje.style.color = "red";
+            } else {
+                parrafoMensaje.textContent = "¡Formulario procesado para: " + nombreUsuario + "!";
+                parrafoMensaje.style.color = "green";
+            }
+        });
+    </script>
+</body>
+
+</html>

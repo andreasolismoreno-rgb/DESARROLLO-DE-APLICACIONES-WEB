@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asociamos el XSD usando xsi:schemaLocation -->
+<viajes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://ejemplo.org/viajes viajes.xsd"
+        xmlns="http://ejemplo.org/viajes">
+
+    <viaje id="V001">
+        <cliente>
+            <nombre>Andrea Solís</nombre>
+            <apellidos>Moreno</apellidos>
+        </cliente>
+        <fechaInicio>2025-07-10</fechaInicio>
+        <fechaFin>2025-07-17</fechaFin>
+        <origen>Madrid</origen>
+        <destinos>
+            <destino>
+                <ciudad>Barcelona</ciudad>
+                <hotel>Hotel Centro</hotel>
+                <noches>3</noches>
+                <precio moneda="EUR">200.00</precio>
+            </destino>
+            <destino>
+                <ciudad>Valencia</ciudad>
+                <hotel>Playa Sol</hotel>
+                <noches>4</noches>
+                <precio moneda="EUR">320.50</precio>
+            </destino>
+        </destinos>
+    </viaje>
+
+</viajes>

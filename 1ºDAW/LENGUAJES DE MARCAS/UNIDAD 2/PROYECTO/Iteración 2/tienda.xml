@@ -1,0 +1,37 @@
+<!ENTITY euro "€">
+<!ENTITY lema "Tu tienda de confianza en tecnología">
+
+<!ELEMENT tienda (pedidos)>
+<!ELEMENT pedidos (pedido+)>
+
+<!ELEMENT pedido (cliente, productos, envio, nota?)>
+<!ATTLIST pedido
+          id ID #REQUIRED
+          fecha CDATA #REQUIRED
+          estado (pendiente | en_proceso | enviado | entregado | cancelado) #REQUIRED
+          prioridad (normal | alta | urgente) #IMPLIED>
+
+<!ELEMENT cliente (nombre, correo, telefono)>
+<!ATTLIST cliente id ID #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+
+<!ELEMENT productos (producto+)>
+
+<!ELEMENT producto (nombre, precio, cantidad)>
+<!ATTLIST producto id ID #REQUIRED>
+
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+
+<!ELEMENT envio (direccion, ciudad, cp, coste)>
+<!ATTLIST envio modalidad (estandar | express | recogida) #REQUIRED>
+
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT coste (#PCDATA)>
+
+<!ELEMENT nota (#PCDATA)>

@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .bloque-servicio {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 1%;
+        box-sizing: border-box;
+    }
+}

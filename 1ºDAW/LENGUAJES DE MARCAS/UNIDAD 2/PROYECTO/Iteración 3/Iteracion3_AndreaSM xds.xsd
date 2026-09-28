@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+  <!-- Elemento raíz -->
+  <xs:element name="tienda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="pedidos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pedido" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="cliente">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="nombre" type="xs:string"/>
+                          <xs:element name="correo" type="xs:string"/>
+                          <xs:element name="telefono" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="productos">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="producto" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="nombre" type="xs:string"/>
+                                <xs:element name="precio" type="xs:decimal"/>
+                                <xs:element name="cantidad" type="xs:positiveInteger"/>
+                              </xs:sequence>
+                              <xs:attribute name="id" type="xs:ID" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+
+                    <xs:element name="envio">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="direccion" type="xs:string"/>
+                          <xs:element name="ciudad" type="xs:string"/>
+                          <xs:element name="cp" type="xs:string"/>
+                          <xs:element name="coste" type="xs:decimal"/>
+                        </xs:sequence>
+                        <xs:attribute name="modalidad" use="required">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="estandar"/>
+                              <xs:enumeration value="express"/>
+                              <xs:enumeration value="recogida"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="nota" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+
+                  <xs:attribute name="id" type="xs:ID" use="required"/>
+                  <xs:attribute name="fecha" type="xs:date" use="required"/>
+                  <xs:attribute name="estado" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="pendiente"/>
+                        <xs:enumeration value="en_proceso"/>
+                        <xs:enumeration value="enviado"/>
+                        <xs:enumeration value="entregado"/>
+                        <xs:enumeration value="cancelado"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="prioridad">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="normal"/>
+                        <xs:enumeration value="alta"/>
+                        <xs:enumeration value="urgente"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

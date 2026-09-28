@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!--SIMULACRO PRUEBA PRÁCTICA unidad 2 Andrea Solís Moreno-->
+
+ <inscripciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="inscripciones.xsd">
+    <catalogoCursos>
+        <curso codigo="C-101" modalidad="presencial" activo="true">
+            <titulo>Desarrollo Web</titulo>
+            <fechaInicio>2025-09-15</fechaInicio>
+            <duracionHoras>2000</duracionHoras>
+            <precio>150.5</precio>
+            <descripcion>Curso de Desarrollo Web centrado en programación en Java y Bases de Datos</descripcion>
+        </curso>
+        <curso codigo="C-102" modalidad="online" activo="false">
+            <titulo>Gestión Administrativa</titulo>
+            <fechaInicio>2025-09-15</fechaInicio>
+            <duracionHoras>2000</duracionHoras>
+            <precio>110.5</precio>
+            <descripcion>Curso de Gestión Administrativa centrado en el aprendizaje de las finanzas y la gestión en entornos laborales</descripcion>
+        </curso>
+    </catalogoCursos>
+
+    <alumnos>
+        <alumno id="A-0001" beca="completa">
+            <nombre>Andrea</nombre>
+            <apellidos>Solís Moreno</apellidos>
+            <email>asolmor2301@g.educaand.es</email>
+            <telefono>654845148</telefono>
+            <matriculas>
+                <matricula cursoCodigo="C-102">
+                    <fecha>2025-11-22</fecha>
+                    <nota>7.5</nota>
+                </matricula>
+            </matriculas>
+        </alumno>
+    </alumnos>
+</inscripciones>

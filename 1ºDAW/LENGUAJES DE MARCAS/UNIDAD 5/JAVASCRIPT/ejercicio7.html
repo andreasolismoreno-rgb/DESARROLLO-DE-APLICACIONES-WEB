@@ -1,0 +1,45 @@
+<!--Ejercicio 7 — Evento mousemove
+Objetivo: Obtener información del evento.
+Enunciado:
+Muestra en pantalla las coordenadas X e Y del ratón mientras se mueve por la
+página.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+    <p>X: <span id="posX">0</span></p>
+    <p>Y: <span id="posY">0</span></p>
+    <script>
+        /* PASO 1: Seleccionamos los elementos donde escribiremos las coordenadas */
+        const spanX = document.getElementById("posX");
+        const spanY = document.getElementById("posY");
+
+        /* PASO 2: Añadimos el evento "mousemove" a todo el documento 
+        (En lugar de usar un botón o una caja, usamos window. 
+        Esto significa que el evento se escuchará en toda la ventana del navegador.)
+           para que detecte el movimiento en cualquier parte de la pantalla. */
+        window.addEventListener("mousemove", function (objetoEvento) {
+            
+            /* PASO 3: El parámetro "objetoEvento" 
+               contiene toda la información de lo que está pasando.
+               .clientX nos da la posición X
+               .clientY nos da la posición Y */
+            
+            let x = objetoEvento.clientX;
+            let y = objetoEvento.clientY;
+
+            /* PASO 4: Actualizamos el HTML con los valores obtenidos */
+            spanX.textContent = x;
+            spanY.textContent = y;
+        });
+    </script>
+</body>
+
+</html>
+

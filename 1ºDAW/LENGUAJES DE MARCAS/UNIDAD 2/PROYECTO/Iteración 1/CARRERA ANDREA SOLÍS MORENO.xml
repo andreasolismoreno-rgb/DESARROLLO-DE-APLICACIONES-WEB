@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE universidad [
+    <!ENTITY nombre_carrera_tecnica "Ingeniería Informática" >
+    <!ENTITY nombre_asignatura_a1 "Programación I" >
+    <!ENTITY nombre_asignatura_a2 "Bases de Datos" >
+    <!ENTITY horas_1 "60" >
+    <!ENTITY horas_2 "45" >
+
+    <!ELEMENT universidad (carreras, profesores, direccion)>
+    <!ELEMENT carreras (carrera+)>
+    <!ELEMENT carrera (nombre, asignatura+)>
+    <!ELEMENT asignatura (titulo, horas+)>
+    <!ELEMENT profesores ( profesor+)>
+    <!ELEMENT profesor ( nombre, especialidad)>
+    <!ELEMENT direccion (calle, ciudad, pais)>
+
+]>
+<universidad>
+    <carreras>
+        <carrera id="c1">
+            <nombre>&nombre_carrera_tecnica; </nombre>
+            <asignatura codigo="a1">
+                <titulo>&nombre_asignatura_a1; </titulo>
+                <horas>&horas_1; </horas>
+            </asignatura>
+            <asignatura codigo="a2">
+                <titulo>&nombre_asignatura_a2; </titulo>
+                <horas>&horas_2; </horas>
+            </asignatura>
+        </carrera>
+        <carrera id="c2">
+            <nombre>Administración de Empresas;</nombre>
+            <asignatura codigo="a3">
+                <titulo>Contabilidad</titulo>
+                <horas>50</horas>
+            </asignatura>
+        </carrera>
+    </carreras>
+
+    <profesores>
+        <profesor id="p1" telefono="900-123-456">
+            <nombre>María González</nombre>
+            <especialidad>Programación</especialidad>
+        </profesor>
+        <profesor id="p2" telefono="600-654-321">
+            <nombre>Carlos Fernández</nombre>
+            <especialidad>Economía</especialidad>
+        </profesor>
+    </profesores>
+
+    <direccion>
+        <calle>Calle Mayor, 123</calle>
+        <ciudad>Madrid</ciudad>
+        <pais>España</pais>
+    </direccion>
+</universidad>

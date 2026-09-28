@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Elemento raíz -->
+  <xs:element name="biblioteca">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name = "catalogo" >
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base = "xs:string">
+                            <xs:attribute name="ISBN" use="required">
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base = "xs:string">
+                        <xs:attribute name="disponible" use="optional">
+                        </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name ="isbn" fixed = "ISBN-\d{5}" type ="xs:pattern"/>
+            <xs:element name="disponible" type="xs:boolean" default="true"/>
+            <xs:element name="titulo" type="xs:string" />
+            <xs:element name="autor" type="xs:string" />
+            <xs:element name="fechaPublicacion" type="xs:date" />
+            <xs:element name="paginas" fixed="215" type="xs:integer"/>
+            <xs:element name="precio" fixed="11.5" type="xs:decimal"/>
+            <xs:element name="sipnosis" type="xs:string" />
+
+        </xs:sequence>
+
+        <xs:sequence>
+            <xs:element name= "usuario">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base = "xs:pattern">
+                            <xs:attribute name="codigo" use="required" maxOccurs= "2">
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base = "xs:string">
+                        <xs:attribute name="prestamo" use="optional">
+                        </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name ="codigo" fixed = "U-\{4}" type ="xs:pattern"/>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+            <xs:element name="telefono"  type="xs:integer"/>
+            <xs:element name="prestamos" maxOccurs= "unbounded" type="xs:integer"/>
+            <xs:element name="devuelto" type="xs:enumeration" default="si"/>
+
+        </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

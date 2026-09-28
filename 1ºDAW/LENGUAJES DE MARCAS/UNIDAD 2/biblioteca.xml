@@ -1,0 +1,36 @@
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="biblioteca.xsd">
+<!--Andrea Solís Moreno-->
+    <catalogo >
+        <libro isbn="97812" disponible = "true">
+            <titulo>Cien años de soledad</titulo>
+            <autor>Gabriel García Márquez</autor>
+            <fechaPublicacion>1975-11-22</fechaPublicacion>
+            <paginas>366</paginas>
+            <precio>9.5</precio>
+            <sipnosis>Historia familiar</sipnosis>
+        </libro>
+        
+        <libro isbn="93321" disponible = "true">
+            <titulo>La Casa de Bernarda Alba</titulo>
+            <autor>Federico García Lorca</autor>
+            <fechaPublicacion>1940-04-13</fechaPublicacion>
+            <paginas>215</paginas>
+            <precio>11.5</precio>
+            <sipnosis>Historia familiar</sipnosis>
+        </libro>
+
+        <usuario codigo = "U-2298" tipo = "adulto | joven | infantil" >
+            <nombre> Bertram </nombre>
+            <apellidos> Andrade Álvarez </apellidos>
+            <email>ba.alvarez@hotmail.com</email>
+            <telefono>632546877</telefono>
+            <prestamos>
+                <prestamo>
+                    <isbnLibro> ISBN-97812 </isbnLibro>
+                    <fecha>2025-11-12</fecha>
+                    <devuelto>si</devuelto>
+                </prestamo>
+            </prestamos>
+        </usuario>
+    </catalogo>
+</biblioteca>

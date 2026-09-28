@@ -1,0 +1,44 @@
+<!--Ejercicio 12 — Eventos en múltiples elementos
+Objetivo: Aplicar eventos a varios elementos.
+Enunciado:
+Cuando se pulse cualquiera de los botones, muestra su texto en el párrafo.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 12</title>
+</head>
+
+<body>
+    <button class="opcion">HTML</button>
+    <button class="opcion">CSS</button>
+    <button class="opcion">JavaScript</button>
+    <p id="resultado"></p>
+    <script>
+        /* PASO 1: Seleccionamos todos los botones que tienen la clase "opcion"
+           querySelectorAll nos devuelve una "NodeList"(parecido a un array). */
+        const botones = document.querySelectorAll(".opcion");
+        const parrafoResultado = document.getElementById("resultado");
+
+        /* PASO 2: Como "botones" es una lista, tenemos que recorrerla.
+           Usamos forEach para decirle: "Para cada botón de esta lista..." */
+        botones.forEach(function (boton) {
+
+            /* PASO 3: A cada botón individual le ponemos su propio evento click */
+            boton.addEventListener("click", function () {
+
+                /* PASO 4: Usamos 'this' o el nombre del parámetro para 
+                   saber cuál de los botones se ha pulsado exactamente. */
+                let textoDelBoton = boton.textContent;
+
+                /* PASO 5: Actualizamos el párrafo */
+                parrafoResultado.textContent = "Has elegido: " + textoDelBoton;
+            });
+
+        });
+    </script>
+</body>
+
+</html>

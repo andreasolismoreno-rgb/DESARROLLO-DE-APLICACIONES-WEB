@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda [
+  <!ENTITY euro "€">
+  <!ENTITY lema "Tu tienda de confianza en tecnología">
+
+  <!ELEMENT tienda (pedidos)>
+  <!ELEMENT pedidos (pedido+)>
+  <!ELEMENT pedido (cliente, productos, envio, nota?)>
+  <!ELEMENT cliente (nombre, correo, telefono)>
+  <!ELEMENT productos (producto+)>
+  <!ELEMENT producto (nombre, precio, cantidad)>
+  <!ELEMENT envio (direccion, ciudad, cp, coste)>
+  <!ATTLIST pedido
+    id ID #REQUIRED
+    fecha CDATA #REQUIRED
+    estado (pendiente | en_proceso | enviado | entregado | cancelado) #REQUIRED
+    prioridad (normal | alta | urgente) #IMPLIED>
+  <!ATTLIST cliente id ID #REQUIRED>
+  <!ATTLIST producto id ID #REQUIRED>
+  <!ATTLIST envio modalidad (estandar | express | recogida) #REQUIRED>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT correo (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+  <!ELEMENT precio (#PCDATA)>
+  <!ELEMENT cantidad (#PCDATA)>
+  <!ELEMENT direccion (#PCDATA)>
+  <!ELEMENT ciudad (#PCDATA)>
+  <!ELEMENT cp (#PCDATA)>
+  <!ELEMENT coste (#PCDATA)>
+  <!ELEMENT nota (#PCDATA)>
+]>
+<tienda>
+  <pedidos>
+    <pedido id="PED-001" fecha="2025-09-25" estado="entregado" prioridad="normal">
+      <cliente id="CLI-001">
+        <nombre>Laura Martínez</nombre>
+        <correo>laura.martinez@example.com</correo>
+        <telefono>654321987</telefono>
+      </cliente>
+
+      <productos>
+        <producto id="PRO-001">
+          <nombre>Portátil Lenovo</nombre>
+          <precio>799.99 &euro;</precio>
+          <cantidad>1</cantidad>
+        </producto>
+        <producto id="PRO-002">
+          <nombre>Ratón inalámbrico Logitech</nombre>
+          <precio>25.50 &euro;</precio>
+          <cantidad>2</cantidad>
+        </producto>
+      </productos>
+
+      <envio modalidad="estandar">
+        <direccion>Calle Mayor 123</direccion>
+        <ciudad>Madrid</ciudad>
+        <cp>28013</cp>
+        <coste>4.99 &euro;</coste>
+      </envio>
+
+      <nota>&lema;</nota>
+    </pedido>
+
+    <pedido id="PED-002" fecha="2025-09-28" estado="enviado" prioridad="alta">
+      <cliente id="CLI-002">
+        <nombre>Carlos Gómez</nombre>
+        <correo>carlos.gomez@example.com</correo>
+        <telefono>912345678</telefono>
+      </cliente>
+
+      <productos>
+        <producto id="PRO-003">
+          <nombre>Teclado mecánico Corsair</nombre>
+          <precio>89.90 &euro;</precio>
+          <cantidad>1</cantidad>
+        </producto>
+        <producto id="PRO-004">
+          <nombre>Auriculares Sony WH-1000XM4</nombre>
+          <precio>299.99 &euro;</precio>
+          <cantidad>1</cantidad>
+        </producto>
+      </productos>
+
+      <envio modalidad="express">
+        <direccion>Avenida del Prado 45</direccion>
+        <ciudad>Barcelona</ciudad>
+        <cp>08010</cp>
+        <coste>9.99 &euro;</coste>
+      </envio>
+
+      <nota>Pedido gestionado con &lema;</nota>
+    </pedido>
+
+    <pedido id="PED-003" fecha="2025-10-01" estado="pendiente" prioridad="urgente">
+      <cliente id="CLI-003">
+        <nombre>Ana Rodríguez</nombre>
+        <correo>ana.rodriguez@example.com</correo>
+        <telefono>600987654</telefono>
+      </cliente>
+
+      <productos>
+        <producto id="PRO-005">
+          <nombre>Impresora HP LaserJet</nombre>
+          <precio>199.00 &euro;</precio>
+          <cantidad>1</cantidad>
+        </producto>
+      </productos>
+
+      <envio modalidad="recogida">
+        <direccion>Centro Comercial La Vaguada</direccion>
+        <ciudad>Madrid</ciudad>
+        <cp>28029</cp>
+        <coste>0.00 &euro;</coste>
+      </envio>
+    </pedido>
+  </pedidos>
+</tienda>

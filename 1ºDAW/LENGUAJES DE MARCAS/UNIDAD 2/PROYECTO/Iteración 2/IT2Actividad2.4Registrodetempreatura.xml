@@ -1,0 +1,25 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--  Elemento raíz  -->
+<xs:element name="registro_temperatura">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="provincia" type="xs:string"/>
+<xs:element name="fecha" type="xs:date"/>
+<xs:element name="temperatura_minima" type="xs:integer"/>
+<xs:element name="temperatura_maxima" type="xs:integer"/>
+<xs:element name="incidencias">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="incidencia" maxOccurs="unbounded">
+<xs:complexType>
+<xs:attribute name="nombre" type="xs:string" use="required"/>
+<xs:attribute name="severidad" type="xs:string" use="required"/>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>

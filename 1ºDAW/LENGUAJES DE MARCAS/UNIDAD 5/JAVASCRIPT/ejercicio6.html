@@ -1,0 +1,54 @@
+<!--Ejercicio 6 — Evento mouseover
+Objetivo: Detectar entrada y salida del ratón.
+Enunciado:
+Cuando el ratón entre en la caja cambia su color.
+Cuando salga vuelve al color original.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+    <style>
+        #zona {
+            width: 250px;
+            height: 150px;
+            border: 2px solid black;
+            /* Añadimos una transición para que el cambio de color no sea brusco */
+            transition: background-color 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zona">Pasa el ratón por aquí</div>
+    <script>
+        /* PASO 1: Seleccionamos el elemento que queremos observar */
+        const zona = document.getElementById("zona");
+       /* PASO 2: Evento cuando el ratón ENTRA (mouseover) */
+        zona.addEventListener("mouseover", function () {
+        /* PASO 3: Cambiamos el color de fondo a amarillo */
+           zona.style.backgroundColor = "yellow";
+            
+            /* Opcional: También podemos cambiar el texto para que sea más visual */
+            zona.textContent = "¡El ratón está DENTRO!";
+        });
+
+        /* PASO 4: Evento cuando el ratón SALE (mouseout) */
+        zona.addEventListener("mouseout", function () {
+            
+            /* PASO 5: Volvemos al color original (blanco o transparente) */
+            zona.style.backgroundColor = "white";
+            
+            /* Volvemos al texto original */
+            zona.textContent = "Pasa el ratón por aquí";
+        });
+    </script>
+</body>
+
+</html>

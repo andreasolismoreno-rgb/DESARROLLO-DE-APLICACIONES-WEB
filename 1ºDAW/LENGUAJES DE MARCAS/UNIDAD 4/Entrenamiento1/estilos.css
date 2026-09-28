@@ -1,0 +1,88 @@
+/* 1. Quitar márgenes y rellenos por defecto */
+* {margin: 0; padding: 0; box-sizing: border-box; /* Recomendado para que el padding no afecte al ancho */
+}
+
+/* 2. Configuración del Body */
+body {
+    background-color: #f4f4f4; /* Gris claro */
+    font-family: Arial, sans-serif;
+    color: #333333; /* Texto oscuro */
+}
+
+/* 3. Contenedor principal */
+#contenedor {
+    width: 70%;
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: #ffffff; /* Blanco */
+    padding: 20px;
+    border: 1px solid #cccccc; /* Borde fino gris */
+}
+
+/* 4. Título */
+.titulo {
+    color: #0000ff; /* Azul */
+    text-align: center;
+}
+
+/* 5. Párrafos */
+p {
+    font-size: 16px;
+    line-height: 1.6; /* Interlineado */
+}
+
+/* 6. Span dentro de .intro */
+.intro span {
+    color: #ff0000; /* Rojo */
+    font-weight: bold;
+}
+
+/* 7. Imagen */
+img {
+    display: block; /* Para que el margen auto funcione */
+    width: 60%;
+    margin: 20px auto; /* Margen superior/inferior y centrado */
+    border: 2px solid #ddd;
+}
+
+/* 8. Lista */
+.lista {
+    list-style-type: square; /* Cambiar tipo de viñeta */
+    margin-left: 40px;
+}
+
+/* 9. Elementos de la lista */
+li {
+    margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+/* 10. Enlaces (estado normal) */
+a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #007bff;
+}
+
+/* 11. Enlaces (al pasar el ratón) */
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* 12. Párrafo destacado */
+.destacado {
+    background-color: #fff9c4; /* Amarillo claro */
+    border-left: 5px solid #fbc02d; /* Borde izquierdo grueso */
+    padding: 15px;
+    margin-top: 20px;
+}
+
+Selector Universal (*): Se usa en el punto 1 para "resetear" el navegador, 
+ya que cada navegador (Chrome, Firefox, etc.) pone márgenes distintos por defecto.
+
+Margen Automático (margin: 0 auto): Es la técnica estándar para centrar un elemento que tiene 
+un ancho definido (como tu #contenedor).
+
+Selectores de Descendencia (.intro span): Esto le dice al navegador: "busca el span que 
+esté dentro de algo con la clase .intro". Es más específico que aplicarlo a todos los spans.
+
+Pseudo-clases (a:hover): Se usa para definir el estilo de un elemento cuando el usuario 
+interactúa con él (en este caso, pasar el ratón por encima).

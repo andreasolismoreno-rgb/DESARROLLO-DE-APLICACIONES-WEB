@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cidmiy5f8bpbg"]
+
+[ext_resource type="Script" uid="uid://chpojnab7ro8l" path="res://scripts/moneda.gd" id="1_47csj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2l3b"]
+radius = 20.0
+
+[node name="Moneda" type="Area2D" unique_id=1527284092]
+script = ExtResource("1_47csj")
+valor = null
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=948269482]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.8788643, 0.5266235, 0.10385262, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314989074]
+shape = SubResource("CircleShape2D_r2l3b")

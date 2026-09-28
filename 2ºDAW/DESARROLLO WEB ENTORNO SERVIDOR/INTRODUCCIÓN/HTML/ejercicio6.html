@@ -1,0 +1,41 @@
+<!-- Validación de acceso-->
+
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title> VALIDACIÓN DE ACCESO </title>
+</head>
+
+
+<body>
+    <header> </header>
+    <main>
+        <section>
+            <form action="/registro" method="POST">
+                <div>
+                    <label for="usuario"> Usuario: </label>
+                    <input type="text" id="usuario" minleght = "4" maxlenght = "12"  placeholder="Entre 4 y 12 caracteres" required>
+                </div>
+                <div>
+                    <label for="contraseña"> Contraseña: </label>
+                    <input type="text" id="contraseña" minleght = "8" placeholder="8 caracteres como mínimo" required>
+                </div>
+                <div>
+                    <label for=" edad"> Edad: </label>
+                    <input type="number" id="edad" min = "16" max = "99" required>
+                </div>
+
+                <div>
+                    <button type="submit"> Enviar</button>
+                </div>
+
+                <input tyoe = "submit" value = "Enviar"/>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

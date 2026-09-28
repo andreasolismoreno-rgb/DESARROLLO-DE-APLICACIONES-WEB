@@ -1,0 +1,179 @@
+<!-- Andrea Solís Moreno 1º DAW-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymPower - Contacto</title>
+    
+    <style>
+        body {font-family: Arial, sans-serif;margin: 0;padding: 0;background-color: pink; /* Fondo principal en pink */color: black;}
+
+
+        header { background-color: purple;  color: white; padding: 15px 20px; text-align: center;}
+
+        header h1 { margin: 0; color: yellow; }
+
+
+
+        nav ul {list-style: none;padding: 0;margin: 5px 0 0 0;display: flex;justify-content: center; }
+
+        nav li {margin: 0 20px; }
+
+        nav a {text-decoration: none;color: white;font-weight: bold; }
+
+        nav a:hover { color: orangered;  }
+
+
+
+        main { padding: 20px; margin-right: 280px;  display: block;}
+        
+
+
+        aside {float: right;  width: 250px; padding: 15px; background-color: lightcoral; border: 2px solid orange;  margin: 20px; box-sizing: border-box;}
+        
+        aside h3 { color: purple;}
+
+
+
+        section {margin-bottom: 30px;padding: 15px; border-left: 6px solid orange;  background-color: white;}
+        
+
+
+        form label { display: block; margin-top: 10px;font-weight: bold;}
+        
+        form input[type="text"], 
+        form input[type="email"], 
+        form input[type="tel"],
+        form select,
+        form textarea { width: 90%; padding: 8px;margin-top: 5px;border: 1px solid grey;}
+        
+        form button {background-color: orange;color: white;padding: 10px 20px;border: none;cursor: pointer;margin-top: 15px;font-size: 1em;font-weight: bold;}
+        
+
+
+        a { color: purple;font-weight: bold;}
+
+
+
+        footer {clear: both; text-align: center;padding: 15px;background-color: purple;color: white;font-size: small;    }
+        
+        footer a { color: yellow;  }
+    </style>
+</head>
+<body id="top"> <!-- ID ES para poder ENLAZAR "volver arriba" desde el footer -->
+
+    <header id="inicio"> <!-- ID se usa para el enlace "volver arriba" -->
+        <h1>GymPower</h1> 
+
+        <!-- Menú de nav (navegación)-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li> <!-- Enlace a la página principal -->
+                <li><a href="servicios.html">Servicios</a></li> <!-- Enlace a servicios -->
+                <li><a href="clases.html">Clases</a></li> <!-- Enlace a clases -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a contacto, en la que nos encontramos ahora -->
+            </ul>
+        </nav>
+    </header>
+
+    <!--Barra lateral aside -->
+    <aside>
+        <h3> Antes de Enviar...</h3> <!-- Título de la barra lateral -->
+
+        <!-- Artículo 1: instrucciones del formulario -->
+        <article>
+            <p><strong>Instrucciones:</strong> Asegúrate de que los campos "Nombre", "Email", "Teléfono" y el "Motivo" estén completados. Esto nos permite dirigir tu consulta al departamento adecuado y responderte rápidamente.</p>
+        </article>
+        
+        <h3> Horario de Atención al Cliente</h3> 
+
+        <!-- Artículo 2: horario en persona -->
+        <article>
+            <p><strong>Horario en Persona:</strong> Lunes a Viernes, de 9:00h a 14:00h y de 17:00h a 20:00h.</p>
+        </article>
+        
+        <!-- Artículo 3: tiempo de respuesta de emails -->
+        <article>
+            <p>Intentamos responder a todos los correos electrónicos en un plazo máximo de 24 horas laborables.</p>
+        </article>
+    </aside>
+
+    <!-- Main -->
+    <main>
+        <h2>Contáctanos y Únete a la Comunidad GymPower</h2> <!-- Este es el título principal del main -->
+
+        <!-- Sección 1: Información de contacto -->
+        <section>
+            <h3>Información de Contacto</h3>
+            <p>
+                <strong>Dirección:</strong> Avenida de las Pesas, 227, 41008 Sevilla, España
+            </p>
+            <p>
+                <strong>Teléfono:</strong>
+                <a href="tel:+34954221320">954 221 320</a> <!-- Link para llamar desde móvil -->
+            </p>
+            <p>
+                <strong>Correo Electrónico:</strong>
+                <a href="mailto:info@gympower.com">info@gympower.com</a> <!-- Link para enviar email -->
+            </p>
+        </section>
+
+        <!-- Sección 2: Formulario de contacto -->
+        <section>
+            <h3>Envíanos un Mensaje</h3>
+
+            <!-- FORMULARIO -->
+            <form action="#" method="get"> <!-- action="#" Se usa para SIMULAR el envío; y method="get" envia datos por una dirección URL -->
+                
+                <!-- Campo Nombre -->
+                <p>
+                    <label for="nombre">Nombre Completo (Obligatorio):</label> <!-- Etiqueta del campo -->
+                    <input type="text" id="nombre" name="nombre" required> <!-- Campo obligatorio -->
+                </p>
+
+                <!-- Campo Email -->
+                <p>
+                    <label for="email">Correo Electrónico (Obligatorio):</label>
+                    <input type="email" id="email" name="email" required> <!-- Tipo email para validación automática -->
+                </p>
+
+                <!-- Campo Teléfono -->
+                <p>
+                    <label for="telefono">Teléfono (Obligatorio):</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </p>
+
+                <!-- Campo Motivo (select) -->
+                <p>
+                    <label for="motivo">Motivo del Contacto (Obligatorio):</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="inscripcion">Información sobre Inscripción/Tarifas</option>
+                        <option value="clases">Consulta sobre Clases Colectivas</option>
+                        <option value="personal">Contratar Entrenamiento Personal</option>
+                        <option value="otro">Otro Motivo</option>
+                    </select>
+                </p>
+
+                <!-- Campo Mensaje -->
+                <p>
+                    <label for="mensaje">Tu Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea> <!-- Área de texto grande -->
+                </p>
+
+                <!-- Botón de envío -->
+                <p>
+                    <button type="submit">Enviar Mensaje</button> <!-- Envia el formulario -->
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 GymPower. Todos los derechos reservados.</p>
+        <p><a href="#inicio">Volver Arriba</a></p> <!-- Enlace que usa ID del header -->
+    </footer>
+</body>
+</html>

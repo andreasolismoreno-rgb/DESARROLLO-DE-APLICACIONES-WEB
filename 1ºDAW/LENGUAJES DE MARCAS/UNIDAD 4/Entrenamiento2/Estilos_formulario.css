@@ -1,0 +1,59 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;;
+    background-color:lightyellow;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    color: black;
+    border: 5px solid yellow;
+    border-radius: 25px;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+form {
+    background-color:lightsalmon;
+    width: 100%;
+    max-width: 450px; 
+    padding: 30px;
+}
+
+label {
+    font-weight: bold;
+    display: block; 
+    margin-bottom: 5px;
+    }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+
+textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid lightyellow;
+    border-radius: 6px;
+    box-sizing: border-box; 
+}
+button[type="submit"] {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: grey; 
+}

@@ -1,0 +1,17 @@
+[2026-09-25 13:31:41] [info]  [ 3192] Apache Commons Daemon procrun (1.6.1.0 64-bit) started.
+[2026-09-25 13:31:41] [info]  [ 3192] redirectStdStreams() stdout and stderr reassigned
+[2026-09-25 13:31:41] [info]  [ 3192] Running Service 'Tomcat10'...
+[2026-09-25 13:31:41] [info]  [21044] Starting service...
+[2026-09-25 13:31:42] [info]  [21044] Service started in 1355 milliseconds.
+[2026-09-25 13:35:32] [info]  [ 3192] Service SERVICE_CONTROL_STOP signalled.
+[2026-09-25 13:35:32] [info]  [ 8036] Stopping service...
+[2026-09-25 13:35:32] [info]  [ 8036] Stopping service...timeout 60000
+[2026-09-25 13:35:32] [info]  [ 8036] Stopping service...timeout 60000 _jni_shutdown
+[2026-09-25 13:35:33] [info]  [ 8036] Service stop thread completed.
+[2026-09-25 13:35:33] [info]  [ 3192] Run service finished.
+[2026-09-25 13:35:33] [info]  [ 3192] Apache Commons Daemon procrun finished.
+[2026-09-25 13:35:55] [info]  [11956] Apache Commons Daemon procrun (1.6.1.0 64-bit) started.
+[2026-09-25 13:35:55] [info]  [11956] redirectStdStreams() stdout and stderr reassigned
+[2026-09-25 13:35:55] [info]  [11956] Running Service 'Tomcat10'...
+[2026-09-25 13:35:55] [info]  [ 5656] Starting service...
+[2026-09-25 13:35:57] [info]  [ 5656] Service started in 1153 milliseconds.

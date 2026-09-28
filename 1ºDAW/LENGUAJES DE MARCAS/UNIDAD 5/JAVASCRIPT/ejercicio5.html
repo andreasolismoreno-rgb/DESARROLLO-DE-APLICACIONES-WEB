@@ -1,0 +1,47 @@
+<!--Ejercicio 5 — Cambiar estilos
+Objetivo: Modificar estilos desde JavaScript.
+Enunciado:
+Cada botón debe cambiar el color de la caja.
+HTML base-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+    <style>
+        #caja {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja"></div>
+    <button id="btnRojo">Rojo</button>
+    <button id="btnVerde">Verde</button>
+    <button id="btnAzul">Azul</button>
+    <script>
+        /* PASO 1: Seleccionamos la caja y los tres botones */
+        const caja = document.getElementById("caja");
+        const botonRojo = document.getElementById("btnRojo");
+        const botonVerde = document.getElementById("btnVerde");
+        const botonAzul = document.getElementById("btnAzul");
+        /* PASO 2: Configuramos cada botón para cambiar el .style.backgroundColor */
+        botonRojo.addEventListener("click", function () {
+            // Accedemos a las propiedades CSS mediante .style
+            caja.style.backgroundColor = "red";
+        })
+        botonVerde.addEventListener("click", function () {
+            caja.style.backgroundColor = "green";
+        })
+        botonAzul.addEventListener("click", function () {
+            caja.style.backgroundColor = "blue";
+        });
+    </script>
+</body>
+
+</html>

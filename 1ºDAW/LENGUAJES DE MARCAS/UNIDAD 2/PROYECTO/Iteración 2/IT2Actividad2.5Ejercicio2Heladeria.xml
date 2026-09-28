@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ELEMENTO RAÍZ -->
+  <xs:element name="heladeria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="helado" type="heladoType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tipo complejo para cada helado -->
+  <xs:complexType name="heladoType">
+    <xs:sequence>
+      
+      <!-- Primer elemento: chocolate O fresa -->
+      <xs:choice>
+        <xs:element name="chocolate" type="gramosType"/>
+        <xs:element name="fresa" type="gramosType"/>
+      </xs:choice>
+
+      <!-- Segundo elemento: vainilla O turron O nata -->
+      <xs:choice>
+        <xs:element name="vainilla" type="gramosType"/>
+        <xs:element name="turron" type="gramosType"/>
+        <xs:element name="nata" type="gramosType"/>
+      </xs:choice>
+      
+    </xs:sequence>
+    <xs:attribute name="fabricación" type="xs:date" use="required"/>
+  </xs:complexType>
+
+  <!-- Tipo simple para los gramos (0–1000) -->
+  <xs:simpleType name="gramosType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

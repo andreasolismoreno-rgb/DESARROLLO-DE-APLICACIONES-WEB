@@ -1,0 +1,241 @@
+/* 1. CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: white; /* Fondo de la web */
+    color: black;            /* Color de texto principal */
+}
+
+/* 2. CABECERA (HEADER) */
+header {
+    background-color: black;  /* Fondo negro para un look deportivo */
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    color: orange;            /* Nombre del gimnasio en naranja */
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* 3. NAVEGACIÓN (MENÚ) */
+nav ul {
+    list-style-type: none;    /* Quita los puntos de la lista */
+}
+
+nav ul li {
+    display: inline;          /* Pone los enlaces uno al lado del otro */
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;    /* Quita el subrayado */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: orange;            /* El enlace cambia a naranja al pasar el ratón */
+}
+
+/* 4. CONTENIDO LATERAL (ASIDE) Y PRINCIPAL (MAIN) */
+/* Para que no se vea todo pegado a los bordes de la pantalla */
+main, aside {
+    padding: 20px;
+    margin: 10px;
+}
+
+aside {
+    background-color: yellow; /* Un color llamativo para avisos y consejos */
+    border: 2px solid black;  /* Borde para resaltar */
+}
+
+aside h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* 5. SECCIONES Y FORMULARIOS */
+section {
+    border-bottom: 1px solid gray; /* Separa las secciones con una línea */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: red;               /* Títulos en rojo para que destaquen */
+    margin-bottom: 10px;
+}
+
+/* Estilo especial para el formulario de contacto */
+input, select, textarea, button {
+    display: block;           /* Pone los campos uno debajo de otro */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 300px;             /* Ancho fijo para que se vea ordenado */
+}
+
+button {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;          /* Cambia el cursor a una mano */
+}
+
+/* 6. PIE DE PÁGINA (FOOTER) */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    clear: both;              /* Asegura que el footer se quede abajo */
+}
+
+footer a {
+    color: orange;
+
+}
+
+
+////////////////
+
+/* 1. RESET Y BASE */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: Snow; /* Un blanco roto muy elegante */
+    color: Black;
+}
+
+/* 2. CABECERA (HEADER) */
+header {
+    background-color: DarkSlateGray; /* Gris oscuro azulado, muy moderno */
+    color: White;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid OrangeRed; /* Línea de color fuego */
+}
+
+header h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: Gold; /* El nombre del gimnasio destaca en dorado */
+}
+
+/* 3. MENÚ DE NAVEGACIÓN */
+nav ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: Gold; /* Cambia a dorado al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* 4. CONTENEDOR DE CONTENIDO (MAIN Y ASIDE) */
+/* Usaremos una técnica de maquetación sencilla para separar bloques */
+
+main {
+    background-color: White;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid LightGray;
+}
+
+aside {
+    background-color: Ivory; /* Un color crema muy suave */
+    margin: 20px;
+    padding: 20px;
+    border-left: 10px solid Orange; /* Una barra lateral naranja */
+}
+
+/* 5. SECCIONES Y TÍTULOS */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: Crimson; /* Rojo fuerte para los títulos de sección */
+    border-bottom: 2px solid LightGray;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: DarkCyan; /* Un verde azulado para subtítulos */
+    margin: 15px 0;
+}
+
+/* Estilo de las listas de beneficios */
+ul {
+    margin-left: 30px;
+    color: DarkSlateGray;
+}
+
+/* 6. FORMULARIO (Página de Contacto) */
+form {
+    background-color: WhiteSmoke;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: DarkSlateGray;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid Silver;
+}
+
+button {
+    background-color: OrangeRed;
+    color: White;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: Black;
+}
+
+/* 7. PIE DE PÁGINA (FOOTER) */
+footer {
+    background-color: Black;
+    color: White;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: Gold;
+}

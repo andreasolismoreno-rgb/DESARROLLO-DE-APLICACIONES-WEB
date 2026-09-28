@@ -1,0 +1,148 @@
+<!-- Andrea Solís Moreno 1º DAW -->
+<!DOCTYPE html> 
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>GymPower - Inicio | Tu Mejor Versión</title> 
+
+    <style>
+        /* Aquí pondremos los estilos */
+        body {font-family: Arial, sans-serif;  margin: 0;  padding: 0; 
+            background-color: pink; /* Color de fondo de la página */
+            color: black; /* Color de texto principal */
+        }
+
+        /* Header es el encabezado principal */
+        header { background-color: purple; color: white;
+            padding: 15px 20px; /* Espaciado interno */
+            text-align: center; /* Centrar el contenido */
+        }
+
+        header h1 { margin: 0;  color: yellow; }
+
+        /* Nav es el Menú de navegación*/
+        nav ul {list-style: none; /* Es para eliminar viñetas */ 
+            padding: 0;
+            margin: 5px 0 0 0; 
+            display: flex; /* Es para mostrar horizontalmente */
+            justify-content: center; /* Para centralizarlo */
+        }
+
+        nav li {margin: 0 20px; /* Espaciado entre los enlaces */}
+
+        nav a {text-decoration: none; /* Quitar subrayado */
+            color: white; /* Color del enlace */
+            font-weight: bold; /*   Texto en negrita */}
+
+        nav a:hover {
+            color: orangered; /* El color al pasar el ratón */
+        }
+
+        /* Main es el contenido principal */
+        main {padding: 20px; margin-right: 280px; display: block;}
+
+        section {margin-bottom: 30px;padding: 15px;border-left: 6px solid orange; background-color: white;}
+
+        /* Aside es el bloque lateral (flotante) */
+        aside {
+            float: right; /* Flotar a la derecha */
+            width: 250px; /* Ancho del bloque */
+            padding: 15px; /* Espaciado interno */
+            background-color: lightcoral; /* Fondo lightcoral */
+            border: 2px solid orange; /* Borde naranja */
+            margin: 20px; /* Margen externo */
+            box-sizing: border-box; /* Incluir padding y borde en ancho */
+        }
+
+        aside h3 {color: purple; /* Es el título del aside */
+        }
+
+        /*Enlaces */
+        a {color: purple;font-weight: bold;}
+
+        /*Footer es el pie de página*/
+        footer {
+            clear: both; /* Limpiar el float */
+            text-align: center; /* Centralizar contenido */
+            padding: 15px; /* Espaciado interno */
+            background-color: purple; /* Fondo de color morado */
+            color: white; /* Color del texto */
+            font-size: small; /* Tamaño de letra pequeño */
+        }
+
+        footer a {color: yellow; /* Color del enlace volver arriba */}
+    </style>
+</head>
+
+<body id="top"> <!--ID para poder enlazar "volver arriba" desde el footer-->
+
+    <header id="inicio">
+        <h1>GymPower</h1> <!-- Nombre del gimnasio -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li> <!-- Enlace a inicio -->
+                <li><a href="servicios.html">Servicios</a></li> <!-- Enlace a servicios -->
+                <li><a href="clases.html">Clases</a></li> <!-- Enlace a clases -->
+                <li><a href="contacto.html">Contacto</a></li> <!-- Enlace a contacto -->
+            </ul>
+        </nav>
+    </header>
+
+    <!--Aside, con bloque lateral con avisos -->
+    <aside>
+        <h3>Avisos Importantes</h3>
+        <article>
+            <h4>Horario de Verano</h4> <!-- Subtítulo del aviso -->
+            <p><strong>Aviso:</strong> A partir del 1 de julio, el gimnasio cierra 1 hora antes (a las 21:00h). 
+                ¡Planifica tu rutina!</p>
+        </article>
+        <article>
+            <h4>Consejo Rápido</h4> <!-- Subtítulo del consejo -->
+            <p>Recuerda realizar un estiramiento estático al final de cada sesión para favorecer la recuperación muscular.</p>
+        </article>
+    </aside>
+
+    <!-- Main, el contenido principal-->
+    <main>
+        <!-- Sección de bienvenida -->
+        <section>
+            <h2>¡Bienvenido a GymPower! Tu Centro de Entrenamiento</h2>
+            <p>En GymPower, no solo entrenas; transformas tu vida. Somos un gimnasio dedicado a ofrecer
+                 un ambiente motivador y las herramientas necesarias para alcanzar tus metas de salud y fitness, 
+                 sin importar tu nivel.</p>
+            <p>Nuestro compromiso es brindarte equipos de alta calidad, instructores certificados 
+                y una comunidad que te apoya en cada paso hacia una vida más saludable.</p>
+
+            <h3>Ventajas de unirte a GymPower</h3>
+            <p>Aquí tienes tres grandes motivos:</p>
+            <ul>
+                <li>Acceso a <strong>equipamiento de última generación</strong> en todas las áreas.</li>
+                <li><strong>Entrenadores personales</strong> expertos y con gran experiencia.</li>
+                <li>Más de 20 <strong>clases colectivas</strong> semanales para todos los niveles.</li>
+            </ul>
+        </section>
+
+        <!-- Sección de resumen de servicios -->
+        <section>
+            <h2>Nuestros Principales Servicios</h2>
+            <p>Descubre todo lo que GymPower tiene para ofrecerte. Hemos diseñado nuestros espacios para cubrir todas tus necesidades de entrenamiento, desde cardio hasta fuerza y relajación.</p>
+            <ul>
+                <li><strong>Zona de Cardio</strong></li>
+                <li><strong>Sala de Musculación y Peso Libre</strong></li>
+                <li><strong>Estudio de Clases Colectivas</strong></li>
+                <li><strong>Entrenamiento Funcional y Cross-Training</strong></li>
+            </ul>
+            <p>¿Quieres conocer el detalle de cada área? <a href="servicios.html">Explora todos nuestros Servicios aquí.</a></p>
+        </section>
+    </main>
+
+    <!--Footer es el pie de página -->
+    <footer>
+        <p>&copy; 2025 GymPower. Todos los derechos reservados.</p>
+        <p><a href="#inicio">Volver Arriba</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8 - Evento de Teclado</title>
+</head>
+
+<body>
+    <p>Tecla pulsada: <span id="tecla">Ninguna</span></p>
+
+    <script>
+        /* PASO 1: Seleccionamos el lugar donde mostraremos el nombre de la tecla */
+        const spanTecla = document.getElementById("tecla");
+
+        /* PASO 2: Escuchamos el evento en "window" o "document". 
+           Usamos "keydown" para detectar el momento en que se pulsa la tecla. */
+        window.addEventListener("keydown", function (event) {
+            
+            /* PASO 3: Accedemos a la propiedad .key del objeto evento.
+               Esta propiedad contiene el nombre de la tecla (ej: "a", "Enter", "ArrowUp"). */
+            let nombreTecla = event.key;
+
+            /* PASO 4: Mostramos el nombre en el HTML */
+            spanTecla.textContent = nombreTecla;
+
+            /* Opcional:Si la tecla es un espacio, 
+               conviene poner un texto descriptivo porque si no parecerá vacío. */
+            if (nombreTecla === " ") {
+                spanTecla.textContent = "Espacio";
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- keydown: Se dispara en el momento en que baja la tecla (es el más usado).
+
+keyup: Se dispara cuando sueltas la tecla.-->

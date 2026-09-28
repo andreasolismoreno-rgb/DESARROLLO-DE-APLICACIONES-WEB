@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 Corregido</title>
+</head>
+<body>
+
+    <button id="btnSaludo">Saludar</button>
+
+    <script>
+        /* PASO 1: Seleccionamos el botón */
+        const botonSaludo = document.getElementById("btnSaludo");
+
+        /* PASO 2: Añadimos el evento */
+        // Asegúrate de que aquí no haya ninguna palabra "boton" suelta antes de la variable
+        botonSaludo.addEventListener("click", function () {
+            
+            /* PASO 3: La acción */
+            alert("Hola, se ha hecho click en el botón");
+            
+        });
+    </script>
+
+</body>
+</html>

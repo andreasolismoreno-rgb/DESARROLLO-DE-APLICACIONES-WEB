@@ -1,0 +1,13 @@
+<!-- Módulo y tecnologías. Representa el modeulo DWES y un lista ordenada con html, php, sql, y json.
+ el modulo sera un apropiedad string, las tecnologías en un array. Mantén el 
+ orden del enunciado.-->
+
+{
+  "modulo": "DWES",
+  "tecnologias": [
+    "html",
+    "php",
+    "sql",
+    "json"
+  ]
+}

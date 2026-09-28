@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding ="UTF-8"?>
+<tienda>
+    <empresa nombre = "Tienda">Bazar Juan &amp; Carmen
+    <empresa correo = "bazar.jc@gmail.com" > </empresa>
+        <cliente1 nombre = "Andrea"> </cliente1>
+        <cliente1 correo ="asolmor2301@g.educaand.es"> </cliente1>
+        <pedido1>
+            <producto1 seccion = "Comida"> Dos paquetes de gusanitos</producto1>
+            <precio> 3 euros </precio>
+
+            <producto2 seccion = "Comida"> Un paquete de pipas</producto2>
+            <precio> 1.75 euros </precio>
+
+            <fecha pedido= "30/09/2025"> </fecha>
+        </pedido1>
+
+        <cliente nombre = "Pepe"> </cliente>
+        <cliente correo ="pepe22@gmail.com"> </cliente>
+        <pedido2>
+            <producto1 seccion = "Comida"> Una botella de coca-cola</producto1>
+            <precio> 1.20 euros </precio>
+
+            <producto2 seccion = "Papeleria"> 1 cuaderno pequeño de cuadros</producto2>
+            <precio> 0.90 centimos </precio>
+
+            <producto3 seccion = "Papeleria"> 1 goma de borrar </producto3>
+            <precio> 0.40 centimos </precio>
+
+            <fecha pedido = "01/10/2025"> </fecha>
+        </pedido2>
+
+        <cliente nombre = "Pepa"> </cliente>
+        <cliente correo ="pepa@hotmail.com"> </cliente>
+        <pedido3>
+            <producto1 seccion = "Jardineria"> 1 bolsa de tierra </producto1>
+            <precio> 15 euros </precio>
+
+            <producto2 seccion = "Jardineria"> 1 plato de maceta </producto2>
+            <precio> 1.70 euros </precio>
+
+            <producto3  seccion = "Bebidas"> 2 botellas de agua </producto3>
+            <precio> 2 euros </precio>
+
+            <producto4 seccion = "Papeleria"> 2 rotuladores </producto4>
+            <precio> 1 euro </precio>
+
+            <fecha pedido= "01/10/2025"> </fecha>
+        </pedido3>
+    </empresa>  
+</tienda>
